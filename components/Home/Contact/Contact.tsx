@@ -8,10 +8,10 @@ const Contact = (): JSX.Element => {
       <p className="text-lg font-normal text-gray-100">
         You can send me over an e-mail on{" "}
         <Link
-          href="mailto:contact@anishde.dev"
+          href={`mailto:${process.env.Email}`}
           className="text-blue-400 hover:!text-blue-300"
         >
-          contact@anishde.dev
+          {process.env.Email}
         </Link>
       </p>
     </div>

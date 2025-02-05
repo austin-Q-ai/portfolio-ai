@@ -1,12 +1,12 @@
 import { ReadTimeResults } from "reading-time";
 
 interface HashnodePost {
-  _id: string;
+  id: string;
   slug: string;
   title: string;
   brief: string;
-  coverImage: string;
-  dateAdded: string;
+  coverImageUrl: string;
+  publishedAt: string;
   readingTime: ReadTimeResults;
   wordCount: number;
 }

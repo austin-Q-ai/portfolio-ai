@@ -1,43 +1,55 @@
 import axios from "axios";
 import fs from "fs";
-import readingTime from "reading-time";
 
 const HASHNODE_DATA_FILE_PATH = "./data/hashnode.json";
-const HASHNODE_API_URL = "https://api.hashnode.com/";
-const HASHNODE_USERNAME = "AnishDe12020";
+const HASHNODE_API_URL = "https://gql.hashnode.com/";
+const HASHNODE_USERNAME = process.env.HASHNODE_USERNAME;
+const HASHNODE_POSTS_NUM = 10;
 
 const main = async () => {
   const query = `
-query($username: String!, $page: Int!) {
-	user(username: $username) {
-    publicationDomain
-		publication {
-			posts(page: $page) {
-        _id
-				slug
-				title
-				brief
-				coverImage
-        dateAdded
-      	contentMarkdown
-			}
-		}
-	}
+query($username: String!, $size: Int!) {
+  user(username: $username) {
+    publications(first: 1, sortBy: DATE_CREATED_DESC) {
+      edges {
+        node {
+          domainInfo {
+            hashnodeSubdomain
+          }
+          posts(first: $size) {
+            edges {
+              node {
+                id
+                slug
+                url
+                publishedAt
+                title
+                brief
+                content {
+                  markdown
+                }
+                readTimeInMinutes
+                coverImage {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 `;
 
-  const posts = [];
-  let domain: string;
-  let didNotGetData = true;
-
-  for (let page = 0; didNotGetData; page++) {
-    const res = await axios.post(
+  await axios
+    .post(
       HASHNODE_API_URL,
       JSON.stringify({
         query,
         variables: {
           username: HASHNODE_USERNAME,
-          page,
+          size: HASHNODE_POSTS_NUM,
         },
       }),
       {
@@ -45,36 +57,37 @@ query($username: String!, $page: Int!) {
           "Content-Type": "application/json",
         },
       }
-    );
+    )
+    .then(res => {
+      const domain =
+        res.data.data.user.publications.edges[0].node.domainInfo
+          .hashnodeSubdomain + ".hashnode.dev";
 
-    const {
-      data: { data },
-    } = res;
+      const parsedPosts =
+        res.data.data.user.publications.edges[0].node.posts.edges.map(post => {
+          const {
+            content: { markdown: contentMarkdown },
+            readTimeInMinutes,
+            coverImage: { url: coverImageUrl },
+            ...postWithoutContent
+          } = post.node;
+          const wordCount = contentMarkdown.split(/\s+/gu).length;
+          return {
+            ...postWithoutContent,
+            readingTime: readTimeInMinutes,
+            coverImageUrl,
+            wordCount,
+          };
+        });
 
-    if (data.user.publication.posts.length === 0) {
-      domain = data.user.publicationDomain;
-      didNotGetData = false;
-      break;
-    } else {
-      posts.push(...data.user.publication.posts);
-    }
-  }
-
-  const parsedPosts = posts.map(post => {
-    const { contentMarkdown, ...postWithoutContent } = post;
-    const rTime = readingTime(contentMarkdown);
-    const wordCount = contentMarkdown.split(/\s+/gu).length;
-    return {
-      ...postWithoutContent,
-      readingTime: rTime,
-      wordCount,
-    };
-  });
-
-  fs.writeFileSync(
-    HASHNODE_DATA_FILE_PATH,
-    JSON.stringify({ posts: parsedPosts, domain })
-  );
+      fs.writeFileSync(
+        HASHNODE_DATA_FILE_PATH,
+        JSON.stringify({ posts: parsedPosts, domain })
+      );
+    })
+    .catch(error => {
+      console.log(error);
+    });
 };
 
 main();

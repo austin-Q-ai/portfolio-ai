@@ -15,8 +15,9 @@ import {
   Home,
   Layout,
   Search,
-  Target,
+  // Target,
   ToggleLeft,
+  MessageCircle,
 } from "react-feather";
 import toast from "react-hot-toast";
 
@@ -57,15 +58,16 @@ const KProvider = ({ children }: KProviderProps): JSX.Element => {
       section: "Pages",
       icon: <Book />,
     },
-    {
-      id: "achievements-page",
-      name: "Achievements",
-      keywords: "achievements",
-      shortcut: ["a"],
-      perform: () => push("/achievements"),
-      section: "Pages",
-      icon: <Target />,
-    },
+    // TODO: enable this section to add achievements
+    // {
+    //   id: "achievements-page",
+    //   name: "Achievements",
+    //   keywords: "achievements",
+    //   shortcut: ["a"],
+    //   perform: () => push("/achievements"),
+    //   section: "Pages",
+    //   icon: <Target />,
+    // },
     {
       id: "projects",
       name: "Projects",
@@ -107,6 +109,15 @@ const KProvider = ({ children }: KProviderProps): JSX.Element => {
         toast.success("Circles toggled");
       },
     },
+    {
+      id: "testimonial",
+      name: "Testimonial",
+      keywords: "Testimonial",
+      shortcut: ["m"],
+      perform: () => push("/#testimonial"),
+      section: "Pages",
+      icon: <MessageCircle />,
+    },
   ];
 
   socials.map(social => {
@@ -123,7 +134,7 @@ const KProvider = ({ children }: KProviderProps): JSX.Element => {
     id: "source-code",
     name: "Source Code",
     keywords: "source code",
-    perform: () => window.open("https://github.com/AnishDe12020/portfolio"),
+    perform: () => window.open(`https://github.com/${process.env.GITHUB_USERNAME}/portfolio-ai`),
     section: "Socials",
     icon: <Code />,
   });
@@ -140,7 +151,7 @@ const KProvider = ({ children }: KProviderProps): JSX.Element => {
 
   hashnodeData.posts.map(post => {
     actions.push({
-      id: post._id,
+      id: post.id,
       name: post.title,
       perform: () => window.open(`https://${hashnodeData.domain}/${post.slug}`),
 

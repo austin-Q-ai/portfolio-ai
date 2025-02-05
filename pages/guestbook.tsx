@@ -6,18 +6,18 @@ const GuestBookPage: NextPage = () => {
   return (
     <>
       <NextSeo
-        title="Guestbook | Anish De"
+        title={`Guestbook | ${process.env.FirstName} ${process.env.LastName}`}
         description="Leave messages on my portfolio site's guestbook :)"
       />
       <h1 className="text-3xl font-bold">GuestBook</h1>
       <p className="mt-4 text-gray-300">Leave a message :)</p>
       <div className="mt-16">
         <Giscus
-          id="comments"
-          repo="AnishDe12020/portfolio"
-          repoId="R_kgDOGfn4eQ"
-          category="Comments"
-          categoryId="DIC_kwDOGfn4ec4CO-cF"
+          id={process.env.GISCUS_ID}
+          repo={`${process.env.GITHUB_USERNAME}/portfolio-ai`}
+          repoId={process.env.GISCUS_REPOID}
+          category={process.env.GISCUS_CATEGORY}
+          categoryId={process.env.GISCUS_CATEGORY_ID}
           mapping="specific"
           term="GuestBook"
           reactionsEnabled="1"

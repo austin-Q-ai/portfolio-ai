@@ -13,13 +13,13 @@ const BlogPosts = ({ posts, domain }: BlogPostsProps): JSX.Element => {
     <>
       <h2 className="mb-8 text-3xl font-bold">Blog Posts</h2>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        {posts.slice(0, 4).map(post => (
+        {posts.slice(0, 2).map(post => (
           <BlogPostCard
-            key={post._id}
+            key={post.id}
             title={post.title}
-            image={post.coverImage}
+            image={post.coverImageUrl}
             placeholderImage={post.placeholderImage}
-            date={post.dateAdded}
+            date={post.publishedAt}
             readingTime={post.readingTime.text}
             url={`https://${domain}/${post.slug}`}
           />

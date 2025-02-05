@@ -16,9 +16,14 @@ const navItems = [
     name: "Projects",
     href: "/projects",
   },
+  // TODO: enable this section to add achievements
+  // {
+  //   name: "Achievements",
+  //   href: "/achievements",
+  // },
   {
-    name: "Achievements",
-    href: "/achievements",
+    name: "Testimonial",
+    href: "/#testimonial",
   },
   {
     name: "Guestbook",

@@ -4,17 +4,15 @@ import { X } from "react-feather";
 import {
   NextJSLogo,
   TypescriptLogo,
-  XdoXLogo,
   ReactLogo,
   FigmaLogo,
   GoLogo,
   TailwindCSSLogo,
-  NotigerLogo,
-  TwNFTLogo,
-  SecliLogo,
-  PayPeerLogo
+  TmcMotorsLogo,
+  TalkhealthLogo,
+  QuestifyAILogo,
+  AutonomaAILogo,
 } from ".";
-import StorliLogo from "./Storli";
 
 interface IconFactoryProps extends SVGProps<SVGSVGElement> {
   name: string;
@@ -29,8 +27,6 @@ const IconFactory = ({
       return <NextJSLogo {...otherProps} />;
     case "typescript":
       return <TypescriptLogo {...otherProps} />;
-    case "xdox":
-      return <XdoXLogo {...otherProps} />;
     case "figma":
       return <FigmaLogo {...otherProps} />;
     case "tailwindcss":
@@ -39,16 +35,14 @@ const IconFactory = ({
       return <GoLogo {...otherProps} />;
     case "react":
       return <ReactLogo {...otherProps} />;
-    case "notiger":
-      return <NotigerLogo {...otherProps} />;
-    case "twnft":
-      return <TwNFTLogo {...otherProps} />;
-    case "storli":
-      return <StorliLogo {...otherProps} />;
-    case "secli":
-      return <SecliLogo {...otherProps} />;
-    case "paypeer":
-      return <PayPeerLogo {...otherProps} />;
+    case "tmc-motors":
+      return <TmcMotorsLogo {...otherProps} />;
+    case "talkhealth":
+      return <TalkhealthLogo {...otherProps} />;
+    case "questify-ai":
+      return <QuestifyAILogo {...otherProps} />;
+    case "autonoma-ai":
+      return <AutonomaAILogo {...otherProps} />;
     default:
       return <X />;
   }

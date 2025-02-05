@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 
 import {
-  DevToLogo,
+  // FacebookLogo,
   GitHubLogo,
+  // Twitterlogo,
   HashnodeLogo,
-  Twitterlogo,
-  YouTubeLogo,
+  // LinkedInLogo,
 } from "@/components/Shared/Icons";
 
 interface Social {
@@ -16,35 +16,38 @@ interface Social {
 }
 
 const socials: Social[] = [
-  {
-    id: "twitter",
-    name: "Twitter",
-    url: "https://twitter.com/AnishDe12020",
-    icon: <Twitterlogo color="#1DA1F2" />,
-  },
+  // {
+  //   id: "twitter",
+  //   name: "Twitter",
+  //   // TODO: replace company url with your personal one.
+  //   url: `https://x.com/${process.env.TWITTER_USERNAME}`,
+  //   icon: <Twitterlogo color="#1DA1F2" />,
+  // },
+  // {
+  //   id: "linkedin",
+  //   name: "Linkedin",
+  //   url: `https://www.linkedin.com/in/${process.env.LINKEDIN_USERNAME}`,
+  //   icon: <LinkedInLogo />,
+  // },
+  // {
+  //   id: "facebook",
+  //   name: "Facebook",
+  //   // TODO: replace company url with your personal one.
+  //   url: `https://facebook.com/${process.env.FACEBOOK_USERNAME}`,
+  //   icon: <FacebookLogo />,
+  // },
   {
     id: "github",
     name: "GitHub",
-    url: "https://github.com/AnishDe12020",
+    url: `https://github.com/${process.env.GITHUB_USERNAME}`,
     icon: <GitHubLogo />,
   },
-  {
-    id: "youtube",
-    name: "YouTube",
-    url: "https://www.youtube.com/anishtechtutorials",
-    icon: <YouTubeLogo color="#ff0000" />,
-  },
+
   {
     id: "hashnode",
     name: "Hashnode",
-    url: "https://hashnode.com/@anishde12020",
+    url: `https://hashnode.com/@${process.env.HASHNODE_USERNAME}`,
     icon: <HashnodeLogo color="#2962ff" />,
-  },
-  {
-    id: "dev.to",
-    name: "Dev.to",
-    url: "https://dev.to/anishde12020",
-    icon: <DevToLogo color="#f0f0f0" />,
   },
 ];
 

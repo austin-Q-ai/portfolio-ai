@@ -7,11 +7,11 @@ interface CustomGiscusProps {
 const CustomGiscus = ({ term }: CustomGiscusProps) => {
   return (
     <Giscus
-      id="comments"
-      repo="AnishDe12020/portfolio"
-      repoId="R_kgDOGfn4eQ"
-      category="Comments"
-      categoryId="DIC_kwDOGfn4ec4CO-cF"
+      id={process.env.GISCUS_ID}
+      repo={`${process.env.GITHUB_USERNAME}/portfolio-ai`}
+      repoId={process.env.GISCUS_REPOID}
+      category={process.env.GISCUS_CATEGORY}
+      categoryId={process.env.GISCUS_CATEGORY_ID}
       mapping="specific"
       term={term}
       reactionsEnabled="1"

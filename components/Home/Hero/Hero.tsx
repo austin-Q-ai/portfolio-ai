@@ -1,23 +1,26 @@
 import Socials from "@/components/Shared/Socials";
 import NextImage from "next/image";
-import AvatarJPG from "public/static/images/avatar.jpg";
+import AvatarJPG from "public/static/images/avatar.png";
 
 const Hero = (): JSX.Element => {
   return (
     <div className="flex flex-col-reverse md:flex-row md:justify-between md:space-y-0">
       <div className="mt-8 flex flex-col justify-center space-y-4 md:mt-0 md:w-2/3">
         <h1 className="will-change-opacity text-5xl font-bold will-change-transform">
-          Anish De
+          {process.env.FirstName} {process.env.LastName}
         </h1>
-        <h2 className="will-change-opacity text-lg font-medium text-gray-400 will-change-transform">
-          High Schooler • Fullstack Web Developer • Web3 Enthusiast • Blogger •
-          Tech Enthusiast
+        <h2 className="will-change-opacity text-lg font-medium text-gray-300 will-change-transform">
+          GenAI Specialist | Backend Engineering | Business Automation | Cloud Architect | 8+ years of experience | Startup Mindset
         </h2>
+        <hr />
         <p className="text-md will-change-opacity text-lg text-gray-300 will-change-transform">
-          I am a fullstack web developer, currently looking into learning new
-          things (Rust, Go, Web3 and backend technologies). Whenever I feel like
-          I should share my knowledge with others, I like to do it via blog
-          posts and social media.
+          A highly skilled <b>GenAI Specialist & Backend Developer</b> with over 9
+          years of experience designing, developing, and maintaining AI & Saas/Web
+          applications. What makes me apart from the crowd is my proficienty in 
+          AI frameworks and tools such as{" "}
+          <b>Langchain, Langgraph, LangSmith, LangFlow, AutoGen</b>. Passionate about
+          creating engaging user experiences and implementing clean, efficient
+          code that delivers results.
         </p>
         <Socials className="!mt-12" />
       </div>
@@ -26,7 +29,7 @@ const Hero = (): JSX.Element => {
           src={AvatarJPG}
           layout="fill"
           placeholder="blur"
-          alt="Anish De"
+          alt={`${process.env.FirstName} ${process.env.LastName}`}
         />
       </div>
     </div>

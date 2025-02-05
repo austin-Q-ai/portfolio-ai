@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Pissarello Marco",
+        "position": "Director at Bondi AI Ltd",
+        "imageUrl": "https://res.cloudinary.com/dicqtnewb/image/upload/v1728406493/project-images/b5itle9rpy9kveqe2ti5.jpg",
+        "testimonial": "His mastery in python web application development coupled with cutting-edge chatbot creation has taken our digital presence to the next level. His collaborative approach and innovative mindset have been invaluable. It’s been a remarkable experience working together."
+    },
+    {
+        "name": "Thomas Carson",
+        "position": "CEO at TiVo Corporation",
+        "imageUrl": "https://res.cloudinary.com/dicqtnewb/image/upload/v1728406493/project-images/nb81tcoqwma3b3texaly.jpg",
+        "testimonial": "He created an intelligent and interactive chatbot that greatly enhanced our user engagement. His thorough understanding of natural language processing and AI technologies was evident in the seamless performance of the bot. The project was completed ahead of schedule with outstanding quality."
+    },
+    {
+        "name": "Anna-Liza Starkova",
+        "position": "CFO at Lund",
+        "imageUrl": "https://res.cloudinary.com/dicqtnewb/image/upload/v1728406493/project-images/cc61p7j82gdfbwcxmxnx.jpg",
+        "testimonial": "He demonstrated exceptional skill and professionalism throughout our project. He was adept at understanding our requirements and translating them into a seamless application. His ability to problem-solve and implement complex features efficiently was truly impressive. We couldn't be more satisfied with the outcome."
+    },
+    {
+        "name": "Naheed Kurji",
+        "position": "CEO of Cyclica",
+        "imageUrl": "https://res.cloudinary.com/dicqtnewb/image/upload/v1728406493/project-images/lonq27a3pmwgyhp9lmuh.jpg",
+        "testimonial": "The AI Talking Avatar developed by him has transformed our customer support operations. It is intuitive, responsive, and significantly reduced response time. He was very attentive to our needs and created a solution that perfectly aligns with our business goals. Fantastic job!"
+    },
+    {
+        "name": "Pesha Rudnick",
+        "position": "Director at Local Theater Company",
+        "imageUrl": "https://res.cloudinary.com/dicqtnewb/image/upload/v1728406493/project-images/vhio5nbyor0wwpxxfxyg.jpg",
+        "testimonial": "Working with this incredible developer has been an absolute pleasure. Their expertise in both back-end development is unmatched. He delivered a robust, scalable solution that exceeded our expectations and his attention to detail ensured a smooth user experience. Highly recommended!"
+    }
+]

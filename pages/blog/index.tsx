@@ -14,18 +14,19 @@ const BlogPostsPage: NextPage<BlogPostsPageProps> = ({ posts }) => {
   return (
     <>
       <NextSeo
-        title="Blog Posts | Anish De"
-        description="Blog written on https://blog.anishde.dev by Anish De"
+        title={`Blog Posts | ${process.env.FirstName} ${process.env.LastName}`}
+        description={`Blog written by ${process.env.FirstName} ${process.env.LastName}`}
       />
       <h1 className="mb-8 text-2xl font-bold">Blog Posts</h1>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+
         {posts.map(post => (
           <BlogPostCard
-            key={post._id}
+            key={post.id}
             title={post.title}
-            image={post.coverImage}
+            image={post.coverImageUrl}
             placeholderImage={post.placeholderImage}
-            date={post.dateAdded}
+            date={post.publishedAt}
             readingTime={post.readingTime.text}
             excerpt={post.brief}
             url={`https://${hashnodeData.domain}/${post.slug}`}
@@ -42,7 +43,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const allProjectsWithPlaceholerImages = [];
 
   for (const post of posts) {
-    const previewUrl = await getPreviewImageUrl(post.coverImage);
+    const previewUrl = await getPreviewImageUrl(post.coverImageUrl);
     allProjectsWithPlaceholerImages.push({
       ...post,
       placeholderImage: previewUrl,
