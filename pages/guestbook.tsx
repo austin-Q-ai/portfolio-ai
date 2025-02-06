@@ -6,7 +6,7 @@ const GuestBookPage: NextPage = () => {
   return (
     <>
       <NextSeo
-        title={`Guestbook | ${process.env.NEXT_PUBLIC_FIRST_NAME || 'Chai'} ${process.env.NEXT_PUBLIC_LAST_NAME || 'Dev'}`}
+        title={`Guestbook | ${process.env.NEXT_PUBLIC_FIRST_NAME || "Chai"} ${process.env.NEXT_PUBLIC_LAST_NAME || "Dev"}`}
         description="Leave messages on my portfolio site's guestbook :)"
       />
       <h1 className="text-3xl font-bold">GuestBook</h1>

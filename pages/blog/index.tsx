@@ -14,8 +14,8 @@ const BlogPostsPage: NextPage<BlogPostsPageProps> = ({ posts }) => {
   return (
     <>
       <NextSeo
-        title={`Blog Posts | ${process.env.NEXT_PUBLIC_FIRST_NAME || 'Chai'} ${process.env.NEXT_PUBLIC_LAST_NAME || 'Dev'}`}
-        description={`Blog written by ${process.env.NEXT_PUBLIC_FIRST_NAME || 'Chai'} ${process.env.NEXT_PUBLIC_LAST_NAME || 'Dev'}`}
+        title={`Blog Posts | ${process.env.NEXT_PUBLIC_FIRST_NAME || "Chai"} ${process.env.NEXT_PUBLIC_LAST_NAME || "Dev"}`}
+        description={`Blog written by ${process.env.NEXT_PUBLIC_FIRST_NAME || "Chai"} ${process.env.NEXT_PUBLIC_LAST_NAME || "Dev"}`}
       />
       <h1 className="mb-8 text-2xl font-bold">Blog Posts</h1>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">

@@ -29,7 +29,7 @@ const Hero = (): JSX.Element => {
           src={AvatarJPG}
           layout="fill"
           placeholder="blur"
-          alt={`${process.env.NEXT_PUBLIC_FIRST_NAME || 'Chai'} ${process.env.NEXT_PUBLIC_LAST_NAME || 'Dev'}`}
+          alt={`${process.env.NEXT_PUBLIC_FIRST_NAME || "Chai"} ${process.env.NEXT_PUBLIC_LAST_NAME || "Dev"}`}
         />
       </div>
     </div>

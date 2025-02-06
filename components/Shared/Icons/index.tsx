@@ -16,3 +16,4 @@ export { default as TalkhealthLogo } from "./Talkhealth";
 export { default as QuestifyAILogo } from "./QuestifyAI";
 export { default as AutonomaAILogo } from "./Autonoma";
 export { default as LinkedInLogo } from "./Linkedin";
+export { default as VoloHealthLogo } from "./Volo-Health";

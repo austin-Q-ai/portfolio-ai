@@ -10,6 +10,7 @@ import {
   TailwindCSSLogo,
   TmcMotorsLogo,
   TalkhealthLogo,
+  VoloHealthLogo,
   QuestifyAILogo,
   AutonomaAILogo,
 } from ".";
@@ -39,6 +40,8 @@ const IconFactory = ({
       return <TmcMotorsLogo {...otherProps} />;
     case "talkhealth":
       return <TalkhealthLogo {...otherProps} />;
+    case "volo-health":
+      return <VoloHealthLogo {...otherProps} />;
     case "questify-ai":
       return <QuestifyAILogo {...otherProps} />;
     case "autonoma-ai":

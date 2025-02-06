@@ -41,7 +41,7 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ blogPost }) => {
               className="rounded-full"
             />
           </div>
-          <p>{process.env.NEXT_PUBLIC_FIRST_NAME || 'Chai'} {process.env.NEXT_PUBLIC_LAST_NAME || 'Dev'}</p>
+          <p>{process.env.NEXT_PUBLIC_FIRST_NAME || "Chai"} {process.env.NEXT_PUBLIC_LAST_NAME || "Dev"}</p>
           <span aria-hidden>/</span>
           <p>{blogPost.date}</p>
         </div>
