@@ -6,7 +6,7 @@ const GuestBookPage: NextPage = () => {
   return (
     <>
       <NextSeo
-        title={`Guestbook | ${process.env.FirstName} ${process.env.LastName}`}
+        title={`Guestbook | ${process.env.NEXT_PUBLIC_FIRST_NAME} ${process.env.NEXT_PUBLIC_LAST_NAME}`}
         description="Leave messages on my portfolio site's guestbook :)"
       />
       <h1 className="text-3xl font-bold">GuestBook</h1>
@@ -14,7 +14,7 @@ const GuestBookPage: NextPage = () => {
       <div className="mt-16">
         <Giscus
           id={process.env.GISCUS_ID}
-          repo={`${process.env.GITHUB_USERNAME}/portfolio-ai`}
+          repo={`${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/portfolio-ai`}
           repoId={process.env.GISCUS_REPOID}
           category={process.env.GISCUS_CATEGORY}
           categoryId={process.env.GISCUS_CATEGORY_ID}

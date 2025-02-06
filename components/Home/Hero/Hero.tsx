@@ -7,10 +7,10 @@ const Hero = (): JSX.Element => {
     <div className="flex flex-col-reverse md:flex-row md:justify-between md:space-y-0">
       <div className="mt-8 flex flex-col justify-center space-y-4 md:mt-0 md:w-2/3">
         <h1 className="will-change-opacity text-5xl font-bold will-change-transform">
-          {process.env.FirstName} {process.env.LastName}
+          {process.env.NEXT_PUBLIC_FIRST_NAME} {process.env.NEXT_PUBLIC_LAST_NAME}
         </h1>
         <h2 className="will-change-opacity text-lg font-medium text-gray-300 will-change-transform">
-          GenAI Specialist | Backend Engineering | Business Automation | Cloud Architect | 8+ years of experience | Startup Mindset
+          GenAI Specialist | Backend Engineering | MLOps Engineer | Business Automation | Cloud Architect | 9+ years of experience | Startup Mindset
         </h2>
         <hr />
         <p className="text-md will-change-opacity text-lg text-gray-300 will-change-transform">
@@ -18,7 +18,7 @@ const Hero = (): JSX.Element => {
           years of experience designing, developing, and maintaining AI & Saas/Web
           applications. What makes me apart from the crowd is my proficienty in 
           AI frameworks and tools such as{" "}
-          <b>Langchain, Langgraph, LangSmith, LangFlow, AutoGen</b>. Passionate about
+          <b>Langchain, Langgraph, AWS SageMaker/Bedrock, Azure AI, LangSmith, LangFlow, AutoGen</b>. Passionate about
           creating engaging user experiences and implementing clean, efficient
           code that delivers results.
         </p>
@@ -29,7 +29,7 @@ const Hero = (): JSX.Element => {
           src={AvatarJPG}
           layout="fill"
           placeholder="blur"
-          alt={`${process.env.FirstName} ${process.env.LastName}`}
+          alt={`${process.env.NEXT_PUBLIC_FIRST_NAME} ${process.env.NEXT_PUBLIC_LAST_NAME}`}
         />
       </div>
     </div>

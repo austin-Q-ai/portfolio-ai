@@ -26,11 +26,11 @@ const SkillPage: NextPage<ProjectPageProps> = ({
   return (
     <>
       <NextSeo
-        title={`${project.name} | ${process.env.FirstName} ${process.env.LastName}`}
+        title={`${project.name} | ${process.env.NEXT_PUBLIC_FIRST_NAME} ${process.env.NEXT_PUBLIC_LAST_NAME}`}
         description={project.description}
         openGraph={{
-          url: `https://${process.env.Domain}/projects/${project.slug}`,
-          title: `${project.name} | ${process.env.FirstName} ${process.env.LastName}`,
+          url: `https://${process.env.NEXT_PUBLIC_DOMAIN}/projects/${project.slug}`,
+          title: `${project.name} | ${process.env.NEXT_PUBLIC_FIRST_NAME} ${process.env.NEXT_PUBLIC_LAST_NAME}`,
           description: project.description,
           images: [
             {

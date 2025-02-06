@@ -8,24 +8,24 @@ export const getServerSideProps = async ({ res }) => {
   const sitemap = `<xml version="1.0" encoding="UTF-8">
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
-      <loc>https://${process.env.Domain}/</loc>
+      <loc>https://${process.env.NEXT_PUBLIC_DOMAIN}/</loc>
       <changefreq>weekly</changefreq>
      </url>
      <url>
-      <loc>https://${process.env.Domain}/blog</loc>
+      <loc>https://${process.env.NEXT_PUBLIC_DOMAIN}/blog</loc>
       <changefreq>weekly</changefreq>
      </url>
      <url>
-      <loc>https://${process.env.Domain}/projects</loc>
+      <loc>https://${process.env.NEXT_PUBLIC_DOMAIN}/projects</loc>
       <changefreq>weekly</changefreq>
      </url>
      <url>
-      <loc>https://${process.env.Domain}/guestbook</loc>
+      <loc>https://${process.env.NEXT_PUBLIC_DOMAIN}/guestbook</loc>
       <changefreq>daily</changefreq>
      </url>
       ${allProjects.map(project => {
         return `<url>
-        <loc>https://${process.env.Domain}/projects/${project.slug}</loc>
+        <loc>https://${process.env.NEXT_PUBLIC_DOMAIN}/projects/${project.slug}</loc>
         <changefreq>weekly</changefreq>
         </url>`;
       })}

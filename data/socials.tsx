@@ -20,13 +20,13 @@ const socials: Social[] = [
   //   id: "twitter",
   //   name: "Twitter",
   //   // TODO: replace company url with your personal one.
-  //   url: `https://x.com/${process.env.TWITTER_USERNAME}`,
+  //   url: `https://x.com/${process.env.NEXT_PUBLIC_TWITTER_USERNAME}`,
   //   icon: <Twitterlogo color="#1DA1F2" />,
   // },
   // {
   //   id: "linkedin",
   //   name: "Linkedin",
-  //   url: `https://www.linkedin.com/in/${process.env.LINKEDIN_USERNAME}`,
+  //   url: `https://www.linkedin.com/in/${process.env.NEXT_PUBLIC_LINKEDIN_USERNAME}`,
   //   icon: <LinkedInLogo />,
   // },
   // {
@@ -39,14 +39,14 @@ const socials: Social[] = [
   {
     id: "github",
     name: "GitHub",
-    url: `https://github.com/${process.env.GITHUB_USERNAME}`,
+    url: `https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
     icon: <GitHubLogo />,
   },
 
   {
     id: "hashnode",
     name: "Hashnode",
-    url: `https://hashnode.com/@${process.env.HASHNODE_USERNAME}`,
+    url: `https://hashnode.com/@${process.env.NEXT_PUBLIC_HASHNODE_USERNAME}`,
     icon: <HashnodeLogo color="#2962ff" />,
   },
 ];

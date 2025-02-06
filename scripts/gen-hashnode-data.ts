@@ -3,7 +3,7 @@ import fs from "fs";
 
 const HASHNODE_DATA_FILE_PATH = "./data/hashnode.json";
 const HASHNODE_API_URL = "https://gql.hashnode.com/";
-const HASHNODE_USERNAME = process.env.HASHNODE_USERNAME;
+const HASHNODE_USERNAME = process.env.NEXT_PUBLIC_HASHNODE_USERNAME;
 const HASHNODE_POSTS_NUM = 10;
 
 const main = async () => {

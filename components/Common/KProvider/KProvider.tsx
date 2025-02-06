@@ -134,7 +134,7 @@ const KProvider = ({ children }: KProviderProps): JSX.Element => {
     id: "source-code",
     name: "Source Code",
     keywords: "source code",
-    perform: () => window.open(`https://github.com/${process.env.GITHUB_USERNAME}/portfolio-ai`),
+    perform: () => window.open(`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/portfolio-ai`),
     section: "Socials",
     icon: <Code />,
   });
