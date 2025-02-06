@@ -34,7 +34,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <DefaultSeo {...SEO} />
         <SocialProfileJsonLd
           type="Person"
-          name={`${process.env.NEXT_PUBLIC_FIRST_NAME} ${process.env.NEXT_PUBLIC_LAST_NAME}`}
+          name={`${process.env.NEXT_PUBLIC_FIRST_NAME || 'Chai'} ${process.env.NEXT_PUBLIC_LAST_NAME || 'Dev'}`}
           url={`https://${process.env.NEXT_PUBLIC_DOMAIN}`}
           sameAs={
             [

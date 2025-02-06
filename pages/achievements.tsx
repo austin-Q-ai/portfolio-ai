@@ -12,8 +12,8 @@ const AchievementsPage: NextPage<AchievementPageProps> = ({ achievements }) => {
   return (
     <>
       <NextSeo
-        title={`Achievements | ${process.env.NEXT_PUBLIC_FIRST_NAME} ${process.env.NEXT_PUBLIC_LAST_NAME}`}
-        description={`${process.env.NEXT_PUBLIC_FIRST_NAME} ${process.env.NEXT_PUBLIC_LAST_NAME}'s Achievements`}
+        title={`Achievements | ${process.env.NEXT_PUBLIC_FIRST_NAME || 'Chai'} ${process.env.NEXT_PUBLIC_LAST_NAME || 'Dev'}`}
+        description={`${process.env.NEXT_PUBLIC_FIRST_NAME || 'Chai'} ${process.env.NEXT_PUBLIC_LAST_NAME || 'Dev'}'s Achievements`}
       />
       <h1 className="mb-8 text-2xl font-bold">Achievements</h1>
       <div className="flex flex-col space-y-8">
