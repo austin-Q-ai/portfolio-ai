@@ -30,6 +30,7 @@ export default async function handler(
     }
 
     // Create new contact
+    // @ts-ignore
     const contact = await Contact.create({
       name,
       email,
