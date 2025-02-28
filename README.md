@@ -1,43 +1,77 @@
-# My Portfolio Site 🚀
-This is my portfolio site built with [Next.js](https://nextjs.org), [TailwindCSS](https://tailwindcss.com), [Contentlayer](https://www.contentlayer.dev/), and has been deploy on [Vercel](https://vercel.com).
+# Portfolio Site 🚀
 
-It is currently a simple portfolio site with a project showcase and a blog posts showcase. I plan on making it a complete blogfolio in the future but the blog part is WIP as of now.
+A modern portfolio site built with cutting-edge technologies to showcase projects, blog posts. Features a clean design, command bar interface, and interactive elements.
 
-## Screenshots
-**Home Page**
+## 🛠️ Built With
 
-![image](https://user-images.githubusercontent.com/63192115/172039448-8a79e500-0819-4e99-a653-471174661606.png)
+- [Next.js](https://nextjs.org) - React framework for production
+- [TailwindCSS](https://tailwindcss.com) - Utility-first CSS framework
+- [Contentlayer](https://www.contentlayer.dev/) - Content SDK for type-safe content
+- [Vercel](https://vercel.com) - Deployment platform
+
+## ✨ Features
+
+- 🎨 Modern and clean design
+- ⌨️ Command bar interface (press `Cmd+K` or `Ctrl+K`)
+- 📱 Fully responsive
+- 📝 MDX-based blog posts
+- 💼 Project showcase
+- 📚 Guestbook with comments
+- 🌙 Dark mode optimized
+- ⚡ Fast page loads and navigation
+- 🔍 SEO optimized
+
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/chai-dev682.git
+```
+
+2. Install dependencies:
+
+```bash
+yarn
+```
+
+3. Create a `.env` file in the root directory from `.env.example` and update with your own values
+
+4. Run the development server:
+
+```bash
+yarn dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📝 Content Management
+
+- Projects: Add MDX files in `data/projects/`
+- Blog Posts: Add MDX files in `data/blog/`
+- Achievements: Add MDX files in `data/achievements/`
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Thanks to all contributors who have helped shape this project
+- Built with inspiration from the developer community
 
 ---
 
-**Command Bar**
+Made with ❤️ by Chai Dev
 
-![image](https://user-images.githubusercontent.com/63192115/172039508-16ffbcc3-ab92-4e9c-a1e1-ea6e0cd50686.png)
-
----
-
-**All Projects**
-
-![image](https://user-images.githubusercontent.com/63192115/172039453-af995e3d-1b27-4246-b4c1-99acec3c5e7f.png)
-
----
-
-**A single project**
-
-![image](https://user-images.githubusercontent.com/63192115/172039474-12354f77-1c82-4d72-ab03-e26e6df9d276.png)
-
----
-
-**All blog posts**
-
-![image](https://user-images.githubusercontent.com/63192115/172039459-28acc7c3-cab4-4c31-8fc8-dc7febd6f707.png)
-
----
-
-**Guestbook**
-
-![image](https://user-images.githubusercontent.com/63192115/172039464-c008cb2f-4f13-44cd-b06e-71eb479ea5a5.png)
-
-
-## Contributing
-Found some issue with the website? Please open a issue or a pull request!
