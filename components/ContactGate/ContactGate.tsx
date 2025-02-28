@@ -28,10 +28,10 @@ const ContactGate = (): JSX.Element => {
     e.preventDefault();
     
     try {
-      const response = await fetch('/api/contacts', {
-        method: 'POST',
+      const response = await fetch("/api/contacts", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -45,7 +45,7 @@ const ContactGate = (): JSX.Element => {
       // Close the modal
       setIsOpen(false);
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error("Error submitting form:", error);
       // You might want to show an error message to the user here
     }
   };

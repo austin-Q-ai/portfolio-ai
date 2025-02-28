@@ -27,7 +27,8 @@ A modern portfolio site built with cutting-edge technologies to showcase project
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/chai-dev682.git
+git clone https://github.com/chai-dev682/portfolio-ai.git
+cd portfolio-ai
 ```
 
 2. Install dependencies:

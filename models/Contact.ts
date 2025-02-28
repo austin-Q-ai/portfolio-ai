@@ -1,14 +1,14 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const ContactSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Name is required'],
+    required: [true, "Name is required"],
     trim: true,
   },
   email: {
     type: String,
-    required: [true, 'Email is required'],
+    required: [true, "Email is required"],
     trim: true,
     lowercase: true,
   },
@@ -18,7 +18,7 @@ const ContactSchema = new mongoose.Schema({
   },
   owner: {
     type: String,
-    required: [true, 'Owner is required'],
+    required: [true, "Owner is required"],
     trim: true,
   },
   createdAt: {
@@ -27,4 +27,4 @@ const ContactSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.models.Contact || mongoose.model('Contact', ContactSchema);
+export default mongoose.models.Contact || mongoose.model("Contact", ContactSchema);
