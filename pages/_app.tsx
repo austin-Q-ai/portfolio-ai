@@ -16,6 +16,7 @@ import Footer from "@/components/Common/Footer";
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 import SEO from "../next-seo.config";
 import Script from "next/script";
+import ContactGate from "@/components/ContactGate/ContactGate";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const { isEnabled } = useCircles();
@@ -52,6 +53,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
               strategy="lazyOnload"
             />
           )}
+        <ContactGate />
         <main id="main" className="relative mx-auto mb-16 max-w-4xl px-8">
           <Component {...pageProps} />
           <CustomToaster />
